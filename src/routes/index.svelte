@@ -1,46 +1,52 @@
 <style>
-	h1, figure, p {
-		text-align: center;
-		margin: 0 auto;
+	#container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	#logo {
+		margin-top: 5%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 	}
 
-	h1 {
-		font-size: 2.8em;
-		text-transform: uppercase;
-		font-weight: 700;
-		margin: 0 0 0.5em 0;
+	#topic {
+		margin-top: 10%;
+		max-width: 50%;
+		border: 1px solid black;
+		border-radius: 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 30px 100px;
 	}
 
-	figure {
-		margin: 0 0 1em 0;
-	}
-
-	img {
-		width: 100%;
-		max-width: 400px;
-		margin: 0 0 1em 0;
-	}
-
-	p {
-		margin: 1em auto;
-	}
-
-	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
-		}
+	#buttonbox {
+		margin-top: 25px;
 	}
 </style>
 
 <svelte:head>
-	<title>Sapper project template</title>
+	<title>SedContra</title>
 </svelte:head>
 
-<h1>Great success!</h1>
+<div id="container">
+	<div id="logo">
+		<!-- I'll get a logo in here eventually -->
+		<h1>Sed Contra</h1>
+		<h3>A Place to Debate</h3>
+	</div>
 
-<figure>
-	<img alt='Borat' src='great-success.png'>
-	<figcaption>HIGH FIVE!</figcaption>
-</figure>
-
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+	<div id="topic">
+		<h2>Is a Hotdog a Sandwich?</h2>
+		<h4>The age old question</h4>
+		<div id="buttonbox">
+			<button>Absolutely it is</button>
+			<button>Of course it's not</button>
+		</div>
+	</div>
+</div>
